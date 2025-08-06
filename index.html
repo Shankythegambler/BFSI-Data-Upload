@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Data Manager</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -16,12 +18,14 @@
         <section id="import-section" class="card">
             <h2>📥 Import Data</h2>
             <div class="import-controls">
+                <!-- Download link for sample CSV format -->
                 <a href="sample.csv" download class="download-link">Download Sample CSV Format</a>
                 <div class="file-upload">
                     <input type="file" id="file-input" accept=".json, .csv">
                     <label for="file-input" class="file-label">Choose File</label>
                 </div>
             </div>
+            <!-- This will show up when a file is selected -->
             <div id="file-info-container" style="display:none; margin-top: 15px;">
                 <p id="file-info" style="font-style: italic;"></p>
                 <button id="upload-data-button" class="btn btn-primary" style="margin-top: 10px;">Upload Data</button>
@@ -41,7 +45,7 @@
                         </tr>
                     </thead>
                     <tbody id="summary-table-body">
-                        </tbody>
+                    </tbody>
                 </table>
             </div>
             <p id="no-data-text">No data uploaded yet.</p>
@@ -86,11 +90,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        </tbody>
+                    </tbody>
                 </table>
             </div>
             <div id="pagination-controls" style="margin-top: 20px; text-align: center;">
-                </div>
+            </div>
         </section>
     </div>
 
