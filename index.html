@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local Data Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <img src="images.png" alt="Authbridge Logo" class="header-image">
+        <h1>Data Manager</h1>
+    </header>
+
+    <div class="container">
+        <section id="import-section" class="card">
+            <h2>📥 Import Data</h2>
+            <div class="import-controls">
+                <a href="sample.csv" download class="download-link">Download Sample CSV Format</a>
+                <div class="file-upload">
+                    <input type="file" id="file-input" accept=".json, .csv">
+                    <label for="file-input" class="file-label">Choose File</label>
+                </div>
+            </div>
+            <div id="file-info-container" style="display:none; margin-top: 15px;">
+                <p id="file-info" style="font-style: italic;"></p>
+                <button id="upload-data-button" class="btn btn-primary" style="margin-top: 10px;">Upload Data</button>
+            </div>
+        </section>
+        
+        <section id="data-summary-section" class="card">
+            <h2>📊 Data Summary</h2>
+            <div id="data-summary-table-container">
+                <table id="data-summary-table" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Total Count</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="summary-table-body">
+                        </tbody>
+                </table>
+            </div>
+            <p id="no-data-text">No data uploaded yet.</p>
+        </section>
+
+        <section id="filter-export-section" class="card">
+            <h2>🔍 Filter & Export</h2>
+            <div class="filter-controls">
+                <div class="date-range-inputs">
+                    <div>
+                        <label for="from-date">From Date:</label>
+                        <input type="date" id="from-date">
+                    </div>
+                    <div>
+                        <label for="to-date">To Date:</label>
+                        <input type="date" id="to-date">
+                    </div>
+                </div>
+                <div class="export-buttons">
+                    <button id="filter-button" class="btn btn-primary">Filter</button>
+                    <button id="export-json-button" class="btn btn-secondary">Export JSON</button>
+                    <button id="export-csv-button" class="btn btn-secondary">Export CSV</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="filtered-results-section" class="card" style="display: none;">
+            <h2>Filtered Results</h2>
+            <div class="data-table-container">
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Client Name</th>
+                            <th>Input Data</th>
+                            <th>Service Name</th>
+                            <th>Vendor Name</th>
+                            <th>Delivery Date</th>
+                            <th>V Send Date</th>
+                            <th>V Receive Date</th>
+                            <th>Other Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+            <div id="pagination-controls" style="margin-top: 20px; text-align: center;">
+                </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
